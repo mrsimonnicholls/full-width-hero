@@ -26,9 +26,14 @@ h6 {
 }
 
 #hero {
+    /* Grid based on your Figma */
     display: grid;
     grid-template-rows: 240px 290px;
     grid-template-columns: 1fr 1fr;
+}
+
+#hero h3 {
+    text-align: right;
 }
 
 #hero .title {
@@ -37,13 +42,16 @@ h6 {
 }
 
 #hero .graphic {
+    /* row-start / col-start / row-end / col-end */
     grid-area: 1 / 1 / 3 / 2;
     margin-top:100px;
 }
 
 #hero .photo {
+    /* row-start / col-start / row-end / col-end */
     grid-area: 2 / 1 / 3 / -1;
-    width: 100%;
+
+    width: 393px;
     height: 290px;
     object-fit: cover;
 }
