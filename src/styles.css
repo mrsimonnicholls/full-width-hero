@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+@import url(nav.css);
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Inclusive Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    margin: 0;
+    margin-top: 52px;
+}
+
+#hero {
+    /* Span all the columns */
+    grid-column: 1 / -1;
+    padding:0;
+}
+
+/* Full-width image at top */
+#hero img {
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Centered content layout */
+/* Change 960px to the max width on desktop */
+main {
+    display: grid;
+    grid-template-columns: auto minmax(0, 960px) auto;
+}
+
+/* sections start in column 2 */
+section {
+    grid-column: 2;
+    padding:1rem;
+}
+
+
+@media (width > 960px) {
+
+    /* Where you want two columns in a section add class="two-column" */
+section.two-column {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+}
+}
+
